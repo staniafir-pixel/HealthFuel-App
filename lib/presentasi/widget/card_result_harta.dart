@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+
+class CardResultHarta extends StatelessWidget {
+  final String title;
+  final String result;
+  final Color color;
+  const CardResultHarta({
+    super.key,
+    required this.title,
+    required this.result,
+    required this.color,
+    });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 24,
+        vertical: 16,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: color,
+      ),
+      child: Column(
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white,
+              fontFamily: 'PoppinsMedium',
+            ),
+          ),
+          const SizedBox(
+            height: 32,
+          ),
+          Text(
+            result,
+            style: const TextStyle(
+              color: Colors.white,
+              fontFamily: 'PoppinsMedium',
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
